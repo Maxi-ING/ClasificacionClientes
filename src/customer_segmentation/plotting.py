@@ -62,7 +62,7 @@ def save_figures(
     temporal = temporal.set_index("segment").reindex(profiles.segment)
     axes[1].bar(profiles.segment, temporal.repurchase_rate, color=COLORS[: len(profiles)])
     axes[1].yaxis.set_major_formatter(PercentFormatter(1))
-    axes[1].set(title="Recompra observada en los 90 días posteriores", xlabel="Segmento")
+    axes[1].set(title="Recompra observada en el periodo posterior", xlabel="Segmento")
     axes[1].set_ylim(0, 1)
     for ax in axes:
         ax.grid(axis="y", alpha=0.12)

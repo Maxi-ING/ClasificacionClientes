@@ -127,7 +127,8 @@ if page == "Resumen":
             width="stretch",
         )
     with right:
-        st.subheader("Recompra en los 90 días posteriores")
+        days = (pd.Timestamp(summary["evaluation_end"]) - pd.Timestamp(summary["cutoff"])).days
+        st.subheader(f"Recompra en los {days} días posteriores")
         st.altair_chart(
             alt.Chart(tables["temporal_evaluation"])
             .mark_bar()

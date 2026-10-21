@@ -30,11 +30,11 @@ def profile_segments(customers: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
     for row in profiles.itertuples():
         if row.frequency_median <= 1:
             name = (
-                "Compra única reciente"
+                "Baja frecuencia reciente"
                 if row.recency_median <= recency_median
-                else "Compra única distante"
+                else "Baja frecuencia distante"
             )
-            action = "Probar un incentivo de segunda compra y medir conversión incremental."
+            action = "Probar un incentivo de recompra y medir conversión incremental."
         elif row.monetary_median >= spending_upper:
             name = "Recurrentes de alto gasto"
             action = "Probar beneficios de fidelización y medir recompra y margen."

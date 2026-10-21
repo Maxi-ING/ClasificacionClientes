@@ -19,6 +19,7 @@ from customer_segmentation.features import FEATURES, build_rfm, future_outcomes,
 from customer_segmentation.modeling import compare_models
 from customer_segmentation.plotting import save_figures
 from customer_segmentation.profiling import profile_segments
+from customer_segmentation.reporting import write_summary
 
 
 def write_json(path: Path, content: dict) -> None:
@@ -108,6 +109,9 @@ def run_pipeline(root: Path, config: dict, raw: pd.DataFrame | None = None) -> d
     write_json(folders["models"] / "model_metadata.json", metadata)
     write_json(folders["reports"] / "run_metadata.json", metadata)
     save_figures(monthly, customers, profiles, comparison, temporal, folders["reports"] / "figures")
+    write_summary(
+        summary, profiles, temporal, selection, folders["reports"] / "executive_summary.md"
+    )
     print("6/6 · Proceso terminado. Consultar reports/ y abrir el dashboard.", flush=True)
     return summary
 
