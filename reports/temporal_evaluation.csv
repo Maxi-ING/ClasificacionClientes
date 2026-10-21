@@ -1,0 +1,3 @@
+segment,customers,repurchasers,repurchase_rate,future_orders,future_gross_amount,future_amount_per_customer
+S01,2861,1000,0.3495281370150297,1559.0,575270.942,201.07338063614122
+S02,1474,1146,0.7774762550881954,3580.0,2135739.7,1448.9414518317506

@@ -1,0 +1,24 @@
+{
+  "raw_rows": 1067371,
+  "sheets": {
+    "Year 2010-2011": 541910,
+    "Year 2009-2010": 525461
+  },
+  "cross_sheet_copies": 22523,
+  "identical_lines_retained": 11812,
+  "missing_customer": 235287,
+  "invalid_date": 0,
+  "invalid_invoice": 0,
+  "invalid_quantity": 0,
+  "invalid_price": 70,
+  "inconsistent_cancellation": 0,
+  "retained_rows": 809491,
+  "purchase_rows": 791045,
+  "cancellation_rows": 18446,
+  "excluded_rows": 257880,
+  "date_min": "2009-12-01 07:45:00",
+  "date_max": "2011-12-09 12:50:00",
+  "customers": 5939,
+  "observation_rows": 379460,
+  "outside_observation_rows": 430031
+}

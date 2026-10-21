@@ -1,0 +1,12 @@
+# Ventanas [inicio, fin): el día final no se incluye.
+source_url: https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip
+raw_file: data/raw/online_retail_II.xlsx
+observation_start: '2010-09-01'
+cutoff: '2011-09-01'
+evaluation_end: '2011-11-30'
+seed: 42
+clusters: [2, 3, 4, 5, 6]
+stability_seeds: [7, 21, 84]
+silhouette_sample: 2000
+minimum_cluster_share: 0.03
+minimum_stability: 0.80
