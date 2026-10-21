@@ -1,0 +1,61 @@
+{
+  "config": {
+    "source_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+    "raw_file": "data/raw/online_retail_II.xlsx",
+    "observation_start": "2010-09-01",
+    "cutoff": "2011-09-01",
+    "evaluation_end": "2011-11-30",
+    "seed": 42,
+    "clusters": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "stability_seeds": [
+      7,
+      21,
+      84
+    ],
+    "silhouette_sample": 2000,
+    "minimum_cluster_share": 0.03,
+    "minimum_stability": 0.8
+  },
+  "features": [
+    "recency",
+    "frequency",
+    "monetary"
+  ],
+  "selection": {
+    "method": "kmeans",
+    "clusters": 2,
+    "fallback": false,
+    "rule": "Mayor silhouette entre KMeans con tamaño y estabilidad mínimos; Ward se compara como referencia sin asignación nativa a nuevos clientes.",
+    "silhouette": 0.4664158555899992,
+    "subsample_ari": 0.9888823381599289
+  },
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "python": "3.12.14",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "pyarrow": "23.0.1",
+    "streamlit": "1.66.1"
+  },
+  "label_map": [
+    {
+      "cluster": 1,
+      "segment": "S02",
+      "name": "Recurrentes de alto gasto"
+    },
+    {
+      "cluster": 0,
+      "segment": "S01",
+      "name": "Baja frecuencia distante"
+    }
+  ],
+  "scope": "Histórico de clientes con compras positivas en la ventana. Monetary mide gasto bruto; las cancelaciones se informan aparte."
+}

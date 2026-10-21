@@ -1,0 +1,18 @@
+{
+  "customers": 4335,
+  "orders": 17822,
+  "gross_amount": 8279871.6049999995,
+  "cancelled_amount": 479861.51,
+  "repeat_customer_share": 0.6369088811995386,
+  "top_10pct_revenue_share": 0.6033097346562055,
+  "median_recency": 112.0,
+  "median_frequency": 2.0,
+  "median_monetary": 645.65,
+  "observation_start": "2010-09-01",
+  "cutoff": "2011-09-01",
+  "evaluation_end": "2011-11-30",
+  "future_customers_new_to_snapshot": 693,
+  "clusters": 2,
+  "future_repurchase_rate": 0.495040369088812,
+  "observed_cancellations_without_purchase_customer": 24379.999999999996
+}
